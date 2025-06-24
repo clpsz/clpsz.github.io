@@ -74,6 +74,10 @@ h1 {
   transition: opacity 0.3s;
 }
 
+.contact-item svg {
+  flex-shrink: 0;
+}
+
 .contact-item:hover {
   opacity: 1;
 }
