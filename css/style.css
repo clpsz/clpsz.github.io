@@ -142,6 +142,7 @@ h1 {
 }
 
 .skill-category h3 {
+  height: 50px;
   margin-bottom: 20px;
   color: #f7fafc;
   flex-shrink: 0;
