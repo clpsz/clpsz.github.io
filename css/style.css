@@ -137,6 +137,7 @@ h1 {
 .skill-category h3 {
   margin-bottom: 20px;
   color: #2c3e50;
+  height: 50px;
 }
 
 .skill-list {
@@ -148,8 +149,9 @@ h1 {
   margin: 8px 0;
   padding: 8px 15px;
   border-radius: 20px;
-  display: inline-block;
-  margin-right: 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
   font-size: 0.9rem;
   color: #555;
   border: 1px solid #e9ecef;
@@ -176,17 +178,24 @@ h1 {
 }
 
 .project-image {
-  height: 200px;
+  height: 100px;
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 24px;
+  font-size: 48px;
 }
 
 .project-content {
   padding: 25px;
+}
+
+.project-date {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .project-title {
@@ -198,6 +207,22 @@ h1 {
 .project-description {
   color: #666;
   margin-bottom: 15px;
+}
+
+.project-achievements {
+  margin-bottom: 15px;
+}
+
+.project-achievements ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.project-achievements li {
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-size: 0.9rem;
 }
 
 .project-tech {
@@ -266,12 +291,81 @@ h1 {
   color: #555;
 }
 
+.timeline-description ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-description li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
   padding: 40px 0;
   margin-top: 60px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.certification-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 4px solid #ff9900;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certification-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.certification-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certification-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.certification-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9900 0%, #ff6600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -291,7 +385,8 @@ footer {
   }
 
   .skills-grid,
-  .projects-grid {
+  .projects-grid,
+  .certifications-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
